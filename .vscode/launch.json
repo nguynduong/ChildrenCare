@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Run Children Care (ServerRunner)",
+      "request": "launch",
+      "mainClass": "com.childrencare.ServerRunner",
+      "projectName": "ChildrenCare"
+    }
+  ]
+}
+

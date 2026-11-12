@@ -1,0 +1,115 @@
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,THE APPLICATION DEVELOPMENT PROJECT TOPIC (SWP391),
+,,,,ASSIGNMENT FUNCTION DETAILS,
+,,,,,
+Project: Online Shop,ChildCare Center,,Total LOC:,3420,
+#,Function/Screen,Feature,Level,LOC,Function/Screen Details
+1,Home Page,Public,Medium,120,"Show sliders, hot posts, featured services + the sider with the latest posts, static contacts/links
+- Shown slider information includes its image and title; the user is redirected to the slider's backlink on his/her clicking
+- Shown post information includes its thumbnail, title, brief-info; the user is redirected to the post's details on his/her clicking
+- Shown service information includes its thumbnail, title, brief information; the user is redirected to the service's details on his/her clicking"
+2,Blogs List,Public,Simple,60,"Show the posts paginatedly (sorted by updated date, paginated) + the sider with the post search box, posts categories, static contacts/links; Shown post information includes its thumbnail, title, brief-info; the user is redirected to the post's details on his/her clicking"
+3,Blog Details,Public,Simple,60,"Show post details (including title, author, updated date, category, and post details) + the sider with the post search box, posts categories, static contacts/links"
+4,Services List,Public,Complex,240,"Show the services paginatedly (sorted by updated date, paginated) + the sider with the service search box, service types, static contacts/links; 
+- Shown service information includes its thumbnail, title, brief information, original price, and sale price; 
+- The user is redirected to the service's details on his/her clicking on the service
+- The user can choose to add the service to the cart or to feedback on the service by clicking the service's Buy & Feedback buttons responsively"
+5,Service Details,Public,Medium,120,"Show service details (including title, category, images, original price, sale price, and service details) + the sider with the service search box, service categories, static contacts/links"
+6,Reservation Details,Public,Medium,120,"Show the cart details with list of the user's chosen services (including Id, title, price, quantity, the number of person, total cost) and the total reservation price + the sider with the service search box, service categories, static contacts/links; The user can
+- Change the quantity of each service: the total cost is automatically adjusted
+- Change the number of person taking part in a service: the total cost is automatically adjusted
+- Choose to delete/remove service by clicking on the deleting icon
+- Click the Choose More Service button to go to Services List page
+- Click the Check Out button to go to the Reservation Contact page
+Please notes: the user's chosen services from the last browsing session are remained in his/her reservation until s/he submit the cart. However, the service prices are updated with the latest prices in the system"
+7,Reservation Contact,Public,Medium,120,"Show the list of user chosen service (including id, title, price, quantity, total cost), the total reservation price and the receiver information (including full-name, gender, email, mobile, address, notes) for user to edit/input + the sider with the service search box, service categories, static contacts/links
+- In case the user has logged in, the receiver information would be filled with the user's information
+- The user can click the Change button to come back to the Reservation Details page for changing the choosing servicds, click the Submit button to submit the reservation before redirecting user to the Reservation Completion or Error page (due to technical error or the time is out of the slot)"
+8,Reservation Completion,Public,Complex,240,"This page show the cart completion notes + the sider with the service search box, service categories, static contacts/links; Before this page is shown:
+- The reservation status is changed to submitted; 
+- The service's available quantities are updated accordingly
+- The submitted reservation is assigned automatically to the active nurse, doctor rotatedly or the doctor & nurse are chosen by customers
+- If the receiver information (name, email, mobile, gender) is new or changed (checking via the email, the latest receiver information is stored in the system as latest & historical system contact information (for the marketing's reference later)
+- The customer/user would be received the reservation confirmation & payment guides via his/her email. Those information is shown on the page also. The payment information (banking account,...) are taken from the system configuration file"
+9,Feedback,Public,Simple,60,"After the end of medical examination, the receiver would receive a confirmation email with the guides to feedback on each of the received service; Beside, the user/receive could also give the feedback (on a specific service or general feedback) via the website; The user also call this screen from the system menu on the header;
+The feedback information includes contact information (full name, gender, email, mobile), rated star, the attached images and the contact's free-format feedback
+The page sider is also shown with the service search box, service categories, static contacts/links; "
+10,User Login,Common,Simple,60,"This is a pop-up screen which allows the user to enter email & password to login; on this page, there are also options for user to register new information or reset the password for the case s/he forget it"
+11,User Register,Common,Simple,60,"This is a pop-up screen which allows the user to register himself/herself to the system by inputing following information: full name, gender, email, mobile, and address; User then need to verify by clicking the link sent via email to him/her before being able to access the system"
+12,Reset Password,Common,Medium,120,"The user input his/her email to receive the reset password link. This link is sent to the user's email for his/her password resetting.
+- On clicking the link, the user is redirected to the password resetting page in which s/he input new password (twice) for the system access
+- Note that the link is only available for a specific time duration as configured in the system config file. "
+13,Change Password,Common,Simple,60,This is a pop-up screen which allows the user to change his/her password by inputting his current password as well as new password (twice)
+14,User Profile,Common,Simple,60,"This is a pop-up screen which allows the user to edit his/her profile information, including the registered ones & the avatar image. Please note that s/he is not allowed to change the email"
+15,User Authorization,Common,Complex,240,"Implementation of authorization mechanism in the system, including the specify the role of logged-in user, his/her authorized page links (building the displayed menu items (in the front end) and preventing unauthorized access via enter the links directly)"
+16,My reservations,Customer,Simple,60,"Show the list of user's reservations paginatedly + the sider with the post search box, posts categories, static contacts/links
+- Each reservation include below information: id, reserved date, service (first service name & number of persons), time to check up, total cost, status;
+- On clicking the link under the reservation id, user would be redirected to the Reservation Information page"
+17,Reservation Information,Customer,Medium,120,"Show the reservation details, including the information as below + the sider with the post search box, posts categories, static contacts/links
+- The reservation id, reservation date, time to check up, total cost, status
+- The receiver information: full name, gender, email, mobile
+- This list of reserved services, each service include following information & the links/buttons that allow the user to re-reserve or feedback: thumbnail, name, service, unit price, number of person, total cost
+For the submitted reservation, the user can choose to update (redirect the user to the Reservation Details page for that) or cancel the reservation"
+18,Posts List,Manager,Medium,120,"Show the paginated list of posts (include posts' id, thumbnail, title, category, author, featured, and status information):
+- The user can filter the post by category, author, status or search by title
+- Sortable by title, category, author, featured, or status
+- From each post, the user can choose to hide, show, view, edit it
+- The page also have the button/link that allows the user to add new post"
+19,Post Details,Manager,Medium,120,"Show detailed post information (thumbnail, category, title, brief information,  description, flag to turn the featurning on/off, status), from that allow the user to input, view or edit them"
+20,Sliders List,Manager,Simple,60,"Show the paginated list of sliders (including sliders' id, title, image, backlink, status)
+- The user can filter the sliders by the status + search by title or backlink
+- For each slider, the user can choose to hide, show, edit it"
+21,Slider Details,Manager,Simple,60,"Show detailed slider information (image, title, backlink, status, notes)"
+22,Services List,Manager,Medium,120,"Show the paginated list of services (include services' id, thumbnail, title, category, list price, sale price, featured, and status information):
+- The user can filter the service by status or search by title, brief info
+- Sortable by title, category, list price, sale price, featured, or status
+- From each service, the user can choose to hide, show, view, edit it
+- The page also have the button/link that allows the user to add new service"
+23,Service Details,Manager,Medium,120,"Show detailed service information (thumbnail, category, title, brief information, attached images, description, number of person, list price, sale price, flag to turn the featurning on/off, status), from that allow the user to input, view or edit them"
+24,Customers List,Manager,Simple,60,"Show the list of customers / contacts paginatedly (include contacts' id, full name, gender, email, mobile, status):
+- The user can filter the customers by status + search by full name, email, mobile
+- Sortable by full name, email, mobile, status
+- From each customer, the user can choose to add new, view or edit it"
+25,Customer Details,Manager,Simple,60,"Show detailed customer/contact information (full name, gender, email, mobile, address, status), from that allow the user to input, view or edit them (excep for the status which is generated automatically - contact, potential or customer)
+Besides, the screen also shows the list of customer/contact changes history in the form of a table which includes following columns: email, full-name, gender, mobile, address, updated by, updated date"
+26,Feedbacks List,Manager,Medium,120,"Show the list of feedbacks paginatedly (include feedbacks' contact full name, service name, rated star, status):
+- The user can filter the feedbacks by status, service, rated star + search by full name, feedback content
+- Sortable by full name, service name, rated star, status
+- From each feedback, the user can choose to view or change it's status"
+27,Feedback Details,Manager,Medium,120,"Show the feedback details (contact full name, email, mobile, service, rated star, feedback, images status) from that allow the user to change its status"
+28,Reservations List,Staff,Simple,60,"Show the list of reservations paginatedly
+- The list can be shorted by the reservation date, customer name, total cost, status
+- Each reservation include below information: id, reserved date, customer name,service (service name & number of person), total cost, status;
+- Allow the users to filter the reservation by the reservation date (from, to), status, staff
+- Allow the user to search the reservations by reservation id, customer name
+- On clicking the link under the reservation id, user would be redirected to the Reservation Details page"
+29,Rerservation Details,Staff,Simple,60,"Show the reservation details, including the following information: 
+- Basic reservation information: reservation id, customer full name, email, mobile, reservation date, total cost, sale name, status
+- The receiver information: full name, gendar, email, mobile, address
+- This list of reserved services, each service include following information: thumbnail, name, category, unit price, number of person, total cost
+
+Manager can change the reservation status 
+Manager can assign the reservation to other staffs"
+30,Medical examination,Staff,Medium,120,"Show the history of examination including the date, used services, medical prescription
+Doctor can add new medical prescription; view existing medical prescription
+User can filter by service, date, medicine name"
+31,Admin Dashboard,Admin,Simple,60,"Show statistics of new reservations (success, cancelled, submitted), revenues (total, by service categories), customers (newly registered, newly reserved), feedbacks (average star: total, by service) & the trend of reservation counts (success, all) by day for the last 7 days (the start date & end date can be adjustable)"
+32,Users List,Admin,Simple,60,"Show the paginated list of registered users (include users' id, full name, gender, email, mobile, role, status):
+- The admin can filter the users by gender, role, status
+- Allow the admin to seach users by full name, email, mobile
+- The list is sortable by id, fullname, gender, email, mobile, role, status
+- From each user, the admin can choose to view or edit it
+- The page also have the button/link that allows the admin to add new user"
+33,User Details,Admin,Simple,60,"Show detailed user information (avatar, full name, gender, email, mobile, role, address, status), from that allow the user to add new, view or edit user information
+- After adding, new generated login password would be email to the new user
+- The admin can only edit/update the role and status of the user"
+34,Settings List,Admin,Simple,60,"Show the paginated list of settings (include settings' id, type, name, value, status):
+- The admin can filter the setting by type, status
+- Allow the admin to seach settings by name, value
+- The list is sortable by id, type, name, value, status
+- From each setting, the admin can choose to view or edit it
+- The page also have the button/link that allows the admin to add new setting"
+35,Setting Details,Admin,Simple,60,"Show detailed user information (type, name, value, description, status), from that allow the user to add new, view or edit setting information"
